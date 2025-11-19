@@ -27,10 +27,10 @@
 }
 
 .list li:hover {
-  color: #1db954;
+  color: #ff5722;
 }
 .active {
-  color: #1db954;
+  color: #c93c11;
 }
 .icon {
   margin-right: 10px;

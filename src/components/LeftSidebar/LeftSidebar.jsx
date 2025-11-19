@@ -1,5 +1,6 @@
 import classes from "./LeftSidebar.module.css";
 import cn from "classnames";
+import { Link } from "react-router-dom";
 import { HiOutlineHome } from "react-icons/hi";
 import { PiUsersThreeBold } from "react-icons/pi";
 import { HiOutlineBell } from "react-icons/hi";
@@ -8,36 +9,36 @@ import { RiChat3Line } from "react-icons/ri";
 
 const LeftSidebar = () => {
   return (
-    <div className={cn(classes.container, "container")}>
+    <aside className={cn(classes.container, "container")}>
       <ul className={classes.list}>
         <li>
-          <a href="">
+          <Link to="/">
             {" "}
             <HiOutlineHome className={classes.icon} /> Home
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="">
+          <Link to="/communities">
             <PiUsersThreeBold className={classes.icon} /> Communities
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="">
+          <Link to="/chat">
             <RiChat3Line className={classes.icon} /> Chat
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="">
+          <Link to="/notifications">
             <HiOutlineBell className={classes.icon} /> Notifications
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="">
+          <Link to="/profile">
             <CgProfile className={classes.icon} /> Profile
-          </a>
+          </Link>
         </li>
       </ul>
-    </div>
+    </aside>
   );
 };
 

@@ -1,0 +1,129 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.card {
+  background-color: transparent;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 20px 10px;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  background-color: rgba(255, 255, 255, 0.02);
+}
+
+.cardhead {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  background-color: #666;
+}
+
+.userInfo {
+  flex: 1;
+}
+
+.username {
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 4px;
+}
+
+.timestamp {
+  font-size: 14px;
+  color: #999;
+}
+
+.followBtn {
+  padding: 6px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 20px;
+  background-color: transparent;
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.followBtn:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.cardbody {
+  margin-bottom: 16px;
+}
+
+.postText {
+  font-size: 15px;
+  color: #e0e0e0;
+  line-height: 1.5;
+  margin-bottom: 12px;
+}
+
+.postImage {
+  width: 100%;
+  border-radius: 12px;
+  max-height: 400px;
+  object-fit: cover;
+}
+
+.cardfooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding-top: 12px;
+}
+
+.left {
+  display: flex;
+  gap: 20px;
+  flex: 1;
+}
+
+.right {
+  display: flex;
+}
+
+.iconBtn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: none;
+  border: none;
+  color: #999;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.2s ease;
+  padding: 4px 8px;
+}
+
+.iconBtn:hover {
+  color: #1db954;
+}
+
+.iconBtn span {
+  font-size: 14px;
+  color: inherit;
+}
+
+.iconBtn.liked {
+  color: #ff0000;
+}
+
+.iconBtn.liked:hover {
+  color: #ff4444;
+}

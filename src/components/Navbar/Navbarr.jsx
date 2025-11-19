@@ -19,7 +19,7 @@ const Navbarr = () => {
   return (
     <div className={cn(classes.navbar, "navbar")}>
       <div className={cn(classes.logo, "logo")}>
-        <img src="null" alt="Konekt Logo" />
+        <img src="/icon/konect.png" alt="Konekt Logo" />
       </div>
       <form onSubmit={handleSearchSubmit} className={cn(classes.searchbar)}>
         <input
@@ -35,9 +35,9 @@ const Navbarr = () => {
         </button>
       </form>
       <div className={cn(classes.ctabtns)}>
-        <button className={cn(classes.ctabtn)}>Login</button>
+        <button className={cn(classes.ctabtn)}>Sign Up</button>
         <button className={cn(classes.ctabtn, classes.signupBtn)}>
-          Signup
+          Log in
         </button>
       </div>
       <Toaster position="bottom-right" />
