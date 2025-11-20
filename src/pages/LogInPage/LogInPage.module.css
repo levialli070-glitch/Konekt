@@ -16,6 +16,56 @@
   padding-top: 10px;
 }
 
+.backBtn {
+  position: absolute;
+  top: 24px;
+  left: -230px;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(217, 217, 217, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 100;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.backBtn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
+  transition: left 0.6s ease;
+}
+
+.backBtn:hover {
+  background: rgba(217, 217, 217, 0.2);
+  border-color: rgba(255, 255, 255, 0.4);
+  box-shadow: 0 4px 15px rgba(29, 185, 84, 0.2);
+  transform: translateY(-2px);
+}
+
+.backBtn:hover::before {
+  left: 100%;
+}
+
 /* Animated orbs */
 .orb1 {
   position: absolute;
