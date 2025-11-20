@@ -1,6 +1,7 @@
 import classes from "./Navbar.module.css";
 import cn from "classnames";
 import React from "react";
+import { Link } from "react-router-dom";
 import { FiSearch } from "react-icons/fi";
 import { Toaster, toast } from "react-hot-toast";
 
@@ -18,9 +19,9 @@ const Navbarr = () => {
   };
   return (
     <div className={cn(classes.navbar, "navbar")}>
-      <div className={cn(classes.logo, "logo")}>
+      <Link to="/" className={cn(classes.logo, "logo")}>
         <img src="/icon/konect.png" alt="Konekt Logo" />
-      </div>
+      </Link>
       <form onSubmit={handleSearchSubmit} className={cn(classes.searchbar)}>
         <input
           type="search"
@@ -35,10 +36,12 @@ const Navbarr = () => {
         </button>
       </form>
       <div className={cn(classes.ctabtns)}>
-        <button className={cn(classes.ctabtn)}>Sign Up</button>
-        <button className={cn(classes.ctabtn, classes.signupBtn)}>
+        <Link to="/signup" className={cn(classes.ctabtn)}>
+          Sign Up
+        </Link>
+        <Link to="/login" className={cn(classes.ctabtn, classes.signupBtn)}>
           Log in
-        </button>
+        </Link>
       </div>
       <Toaster position="bottom-right" />
     </div>
