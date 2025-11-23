@@ -7,23 +7,79 @@
 .container {
   margin-left: 250px;
   margin-right: 250px;
-  margin-top: 90px;
   padding: 40px 20px;
   min-height: calc(100vh - 90px);
+}
+
+.header {
+  margin-bottom: 40px;
+}
+
+.title {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #fff;
+  animation: slideDown 0.5s ease-out;
+}
+
+.subtitle {
+  font-size: 16px;
+  color: #999;
+  animation: slideDown 0.5s ease-out 0.1s both;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .content {
   width: 100%;
 }
 
-.content h1 {
-  font-size: 32px;
-  font-weight: 700;
-  margin-bottom: 10px;
-  color: #fff;
+/* Responsive design */
+@media (max-width: 1200px) {
+  .container {
+    margin-left: 250px;
+    margin-right: 250px;
+  }
 }
 
-.content p {
-  font-size: 16px;
-  color: #ccc;
+@media (max-width: 768px) {
+  .container {
+    margin-left: 0;
+    margin-right: 0;
+    padding: 20px 16px;
+  }
+
+  .title {
+    font-size: 24px;
+  }
+
+  .subtitle {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    margin-top: 90px;
+    padding: 16px 12px;
+  }
+
+  .title {
+    font-size: 20px;
+    margin-bottom: 8px;
+  }
+
+  .subtitle {
+    font-size: 13px;
+  }
 }

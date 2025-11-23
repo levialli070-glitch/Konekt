@@ -9,7 +9,8 @@ const PostList = ({ filters = { sort: "latest", location: "all" } }) => {
       {
         id: 1,
         username: "Alli Levi Irika",
-        profilePic: "https://api.dicebear.com/7.x/avataaars/svg?seed=Alli",
+        profilePic:
+          "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop",
         timestamp: "10 mins ago",
         content:
           "This is my first post on Konekt! Excited to connect with everyone here.",
@@ -23,7 +24,8 @@ const PostList = ({ filters = { sort: "latest", location: "all" } }) => {
       {
         id: 2,
         username: "Okoi Judith Avivi",
-        profilePic: "https://api.dicebear.com/7.x/avataaars/svg?seed=Sarah",
+        profilePic:
+          "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop",
         timestamp: "2 hours ago",
         content:
           "Just finished an amazing project with my team. Collaboration at its finest! 🚀",
@@ -37,7 +39,8 @@ const PostList = ({ filters = { sort: "latest", location: "all" } }) => {
       {
         id: 3,
         username: "Marcus Shawn",
-        profilePic: "https://api.dicebear.com/7.x/avataaars/svg?seed=Marcus",
+        profilePic:
+          "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop",
         timestamp: "5 hours ago",
         content:
           "The weather is perfect today. Time to go for a hike and clear the mind.",
@@ -51,7 +54,8 @@ const PostList = ({ filters = { sort: "latest", location: "all" } }) => {
       {
         id: 4,
         username: "Emma Wilson",
-        profilePic: "https://api.dicebear.com/7.x/avataaars/svg?seed=Emma",
+        profilePic:
+          "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop",
         timestamp: "8 hours ago",
         content:
           "Sharing my thoughts on web development best practices. Check out my blog for more details!",
@@ -65,7 +69,8 @@ const PostList = ({ filters = { sort: "latest", location: "all" } }) => {
       {
         id: 5,
         username: "Alex Rodriguez",
-        profilePic: "https://api.dicebear.com/7.x/avataaars/svg?seed=Alex",
+        profilePic:
+          "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop",
         timestamp: "12 hours ago",
         content:
           "Learning React has been a game-changer for my development workflow. Loving every minute of it!",

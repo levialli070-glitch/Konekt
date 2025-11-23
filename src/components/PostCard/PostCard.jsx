@@ -1,31 +1,29 @@
 import React, { useState } from "react";
 import classes from "./PostCard.module.css";
 import cn from "classnames";
-import { AiOutlineLike, AiFillLike } from "react-icons/ai";
+import { AiFillLike, AiOutlineLike } from "react-icons/ai";
 import { FaRegComment } from "react-icons/fa";
 import { CiBookmark } from "react-icons/ci";
 import { BsShare } from "react-icons/bs";
+import LazyImage from "../LazyImage/LazyImage";
 
 const PostCard = ({ post }) => {
   const [isLiked, setIsLiked] = useState(false);
   const [likeCount, setLikeCount] = useState(post.likes);
 
   const handleLike = () => {
-    if (isLiked) {
-      setLikeCount(likeCount - 1);
-    } else {
-      setLikeCount(likeCount + 1);
-    }
     setIsLiked(!isLiked);
+    setLikeCount(isLiked ? likeCount - 1 : likeCount + 1);
   };
 
   return (
     <div className={classes.card}>
       <div className={classes.cardhead}>
-        <img
+        <LazyImage
           src={post.profilePic}
           alt="profilepic"
           className={classes.avatar}
+          style={{ width: "40px", height: "40px", borderRadius: "50%" }}
         />
         <div className={classes.userInfo}>
           <p className={classes.username}>{post.username}</p>
@@ -36,7 +34,11 @@ const PostCard = ({ post }) => {
       <div className={classes.cardbody}>
         <p className={classes.postText}>{post.content}</p>
         {post.image && (
-          <img src={post.image} alt="post" className={classes.postImage} />
+          <LazyImage
+            src={post.image}
+            alt="post"
+            className={classes.postImage}
+          />
         )}
       </div>
       <div className={classes.cardfooter}>
